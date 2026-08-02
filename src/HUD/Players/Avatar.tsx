@@ -86,7 +86,7 @@ const Avatar = ({
       src={avatarSrc || defaultPic}
       height={height}
       width={width}
-      alt="Avatar"
+      alt="头像"
       style={{ filter: `brightness(${flashValue}%)` }}
     />
   );

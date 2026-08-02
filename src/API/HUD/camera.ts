@@ -77,7 +77,7 @@ const closeConnection = (steamid: string) => {
       connectionInfo.peerConnection = null;
     }
   } catch {
-    // Ignore peer teardown errors, we just want to clean up state.
+    // 忽略连接断开错误，我们只需清理状态
   }
 
   for (const listener of mediaStreams.listeners.filter(

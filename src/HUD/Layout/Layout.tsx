@@ -61,7 +61,7 @@ const Layout = ({ game, match }: Props) => {
     (game.round && game.round.phase === "freezetime") ||
     game.phase_countdowns.phase === "freezetime";
 
-  // 🔽 [LOGIC] Клатч, 1в1, музыка clutch.ogg
+  // 🔽 [逻辑] 残局、1v1、播放 clutch.ogg 音乐
   useEffect(() => {
     const leftAlive = leftPlayers.filter((p) => p.state.health > 0).length;
     const rightAlive = rightPlayers.filter((p) => p.state.health > 0).length;
@@ -90,7 +90,7 @@ const Layout = ({ game, match }: Props) => {
       }
     }
   }, [leftPlayers, rightPlayers, game.round?.phase]);
-  // 🔼 [LOGIC] Клатч, 1в1, музыка clutch.ogg
+  // 🔼 [逻辑] 残局、1v1、播放 clutch.ogg 音乐
 
   return (
     <div className="layout">
@@ -105,7 +105,7 @@ const Layout = ({ game, match }: Props) => {
       <Pause phase={game.phase_countdowns} />
       <Timeout map={game.map} phase={game.phase_countdowns} />
 
-      {/* 🔽 [UI] БЛОК КЛАТЧА/1v1 */}
+      {/* 🔽 [UI] 残局/1v1 区块 */}
       <div
         className={`players_alive ${
           showClutch && !isBombAction && game.round?.phase !== "over"
@@ -114,7 +114,7 @@ const Layout = ({ game, match }: Props) => {
         }`}
       >
         <div className="title_container">
-          {isOneVsOne ? "Поєдинок" : "Клатч ситуація"}
+          {isOneVsOne ? "对决" : "残局"}
         </div>
         <div className="counter_container">
           <div className={`team_counter ${left.side}`}>
@@ -126,9 +126,9 @@ const Layout = ({ game, match }: Props) => {
           </div>
         </div>
       </div>
-      {/* 🔼 [UI] БЛОК КЛАТЧА/1v1 */}
+      {/* 🔼 [UI] 残局/1v1 区块 */}
 
-      {/* 🔊 МУЗЫКА */}
+      {/* 🔊 音乐 */}
       <audio id="clutch-audio" src="/clutch.ogg" preload="auto" />
 
       <SeriesBox map={game.map} match={match} />

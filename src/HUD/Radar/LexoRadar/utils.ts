@@ -248,11 +248,11 @@ export const extendGrenade = ({grenade, mapName, side }: { side: Side | null, gr
         if (extGrenade.type === "smoke") {
             if (extGrenade.effecttime !== 0) {
                 grenadeObject.state = "landed";
-                if (extGrenade.effecttime >= 16.5) {
+                if ((extGrenade.effecttime as number) >= 16.5) {
                     grenadeObject.state = 'exploded';
                 }
             }
-        } else if ((extGrenade.type === 'flashbang' && extGrenade.lifetime >= EXPLODE_TIME_FLASH) || (extGrenade.type === 'frag' && extGrenade.lifetime >= EXPLODE_TIME_FRAG)) {
+        } else if ((extGrenade.type === 'flashbang' && (extGrenade.lifetime as number) >= EXPLODE_TIME_FLASH) || (extGrenade.type === 'frag' && (extGrenade.lifetime as number) >= EXPLODE_TIME_FRAG)) {
             grenadeObject.state = 'exploded';
         }
         return grenadeObject;
@@ -271,11 +271,11 @@ export const extendGrenade = ({grenade, mapName, side }: { side: Side | null, gr
         if (extGrenade.type === "smoke") {
             if (extGrenade.effecttime !== 0) {
                 grenadeObject.state = "landed";
-                if (extGrenade.effecttime >= 16.5) {
+                if ((extGrenade.effecttime as number) >= 16.5) {
                     grenadeObject.state = 'exploded';
                 }
             }
-        } else if ((extGrenade.type === 'flashbang' && extGrenade.lifetime >= EXPLODE_TIME_FLASH) || (extGrenade.type === 'frag' && extGrenade.lifetime >= EXPLODE_TIME_FRAG)) {
+        } else if ((extGrenade.type === 'flashbang' && (extGrenade.lifetime as number) >= EXPLODE_TIME_FLASH) || (extGrenade.type === 'frag' && (extGrenade.lifetime as number) >= EXPLODE_TIME_FRAG)) {
             grenadeObject.state = 'exploded';
         }
         return grenadeObject;

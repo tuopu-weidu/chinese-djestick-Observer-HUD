@@ -33,7 +33,7 @@ const Timeout = ({ phase, map }: IProps) => {
       }`}
     >
       <div className={team.side}>{team.name}&nbsp;</div>
-      <div>ПЕРЕРВА</div>
+      <div>暂停</div>
     </div>
   );
 };

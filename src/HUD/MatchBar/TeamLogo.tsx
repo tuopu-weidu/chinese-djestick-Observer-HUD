@@ -20,7 +20,7 @@ const TeamLogo = ({
   } else if ("id" in team && team.id) {
     id = team.id;
   }
-  // ${apiUrl}/teams/${id}/logo - Old way of getting the logo
+  // ${apiUrl}/teams/${id}/logo - 旧的获取队标方式
   return (
     <div className={`logo`}>
       {logo && id ? (
@@ -28,7 +28,7 @@ const TeamLogo = ({
           src={`${apiUrl}api/teams/logo/${id}`}
           width={width}
           height={height}
-          alt={"Team logo"}
+          alt={"队标"}
         />
       ) : (
         ""

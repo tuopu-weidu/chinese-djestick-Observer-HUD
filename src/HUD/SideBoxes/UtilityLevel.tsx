@@ -10,21 +10,21 @@ interface Props {
 
 function utilityState(amount: number) {
   if (amount === 20) {
-    return "Full";
+    return "充足";
   }
   if (amount > 14) {
-    return "Great";
+    return "较多";
   }
   if (amount > 9) {
-    return "Good";
+    return "良好";
   }
   if (amount > 5) {
-    return "Low";
+    return "较少";
   }
   if (amount > 0) {
-    return "Poor";
+    return "不足";
   }
-  return "None";
+  return "无";
 }
 
 function utilityColor(amount: number) {

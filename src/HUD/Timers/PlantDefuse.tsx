@@ -16,7 +16,7 @@ const getCaption = (type: "defusing" | "planting", player: Player | null) => {
       <>
         <I.Defuse height={22} width={22} fill="var(--color-new-ct)" />
         <div>{player.name}&nbsp;</div>
-        <div className={"CT"}>is defusing</div>
+        <div className={"CT"}>正在拆弹</div>
       </>
     );
   }
@@ -24,7 +24,7 @@ const getCaption = (type: "defusing" | "planting", player: Player | null) => {
     <>
       <I.SmallBomb height={22} fill="var(--color-new-t)" />
       <div>{player.name}&nbsp;</div>
-      <div className={"T"}> is planting</div>
+      <div className={"T"}>正在安放</div>
     </>
   );
 };
@@ -33,7 +33,7 @@ const Bomb = ({ timer, side }: IProps) => {
   const [stage, setStage] = useState<
     "hidden" | "background" | "progress" | "exit"
   >("hidden");
-  const [progressDuration, setProgressDuration] = useState(0); // в секундах
+  const [progressDuration, setProgressDuration] = useState(0); // 单位：秒
   const [visibleTimer, setVisibleTimer] = useState<Timer | null>(null);
 
   useEffect(() => {
@@ -84,7 +84,7 @@ const Bomb = ({ timer, side }: IProps) => {
     <div className={`defuse_plant_container ${side} stage-${stage}`}>
       <div className="container-background" />
 
-      {/* Прогресс-бары */}
+      {/* 进度条 */}
       <div
         className="defuse_plant_bar bar-left"
         style={
@@ -122,11 +122,11 @@ const Bomb = ({ timer, side }: IProps) => {
         />
       )}
 
-      {/* Текст поверх */}
+      {/* 覆盖文字 */}
       <div className="defuse_plant_caption">
         <div>{visibleTimer.player?.name}&nbsp;</div>
         <div className={visibleTimer.type === "defusing" ? "CT" : "T"}>
-          {visibleTimer.type === "defusing" ? "is defusing" : "is planting"}
+          {visibleTimer.type === "defusing" ? "正在拆弹" : "正在安放"}
         </div>
       </div>
     </div>

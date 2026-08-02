@@ -10,7 +10,7 @@ const Pause = ({ phase }: IProps) => {
       id={`pause`}
       className={phase && phase.phase === "paused" ? "show" : ""}
     >
-      ТЕХНІЧНА ПЕРЕРВА
+      技术暂停
     </div>
   );
 };

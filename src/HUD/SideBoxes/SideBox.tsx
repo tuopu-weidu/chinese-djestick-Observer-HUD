@@ -23,7 +23,7 @@ const Sidebox = ({side, hide} : { side: 'left' | 'right', hide: boolean}) => {
                 <div className="subtitle">{data[`${side}_subtitle`]}</div>
             </div>
             <div className="image_container">
-                {image ? <img src={image} id={`image_left`} alt={'Left'}/>:null}
+                {image ? <img src={image} id={`image_left`} alt={'侧边栏图片'}/>:null}
             </div>
         </div>
     );

@@ -22,7 +22,7 @@ const CameraView = ({ steamid, visible }: Props) => {
       }
       remoteVideo.srcObject = stream;
       remoteVideo.play().catch(() => {
-        /* ignore autoplay errors */
+        /* 忽略自动播放错误 */
       });
     };
 

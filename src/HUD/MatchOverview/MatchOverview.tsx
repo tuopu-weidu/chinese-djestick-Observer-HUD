@@ -16,7 +16,7 @@ const MatchOverview = ({ match, teams, show }: IProps) => {
   return (
     <div className={`match-overview ${show ? "show" : ""}`}>
       <div className="match-overview-title">
-        Upcoming match
+        即将开始的比赛
       </div>
       <div className="match-overview-teams">
         <div className="match-overview-team">

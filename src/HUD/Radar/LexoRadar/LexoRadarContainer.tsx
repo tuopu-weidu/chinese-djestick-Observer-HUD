@@ -121,7 +121,7 @@ const LexoRadarContainer = ({
 
     if (!(mapName in maps)) {
         return <div className="map-container" style={{ width: size, height: size, transform: `scale(${size / 1024})`, top: -offset, left: -offset }}>
-            Unsupported map
+            不支持的地图
         </div>;
     }
     const playersExtended: RadarPlayerObject[] = players.map(pl => extendPlayer({ player: pl, steamId: player?.steamid || null, mapName })).filter((player): player is RadarPlayerObject => player !== null).flat();

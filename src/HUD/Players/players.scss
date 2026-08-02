@@ -63,7 +63,7 @@
       fill: #e7e7e7;
     }
     .avatar {
-      margin-right: 6px; // или сколько тебе нужно, подбери визуально
+      margin-right: 6px; // 或根据需要手动调整
     }
   }
 
@@ -464,7 +464,7 @@
   font-family: "Unbounded", sans-serif;
   z-index: 99;
 
-  // glow-эффект
+  // 发光效果
   &::before {
     content: "";
     position: absolute;
@@ -542,7 +542,7 @@
   bottom: 0;
   width: 100%;
   height: 35px;
-  z-index: 0; // важно, чтобы было под другими
+  z-index: 0; // 重要，确保在其他元素下方
 
   .hp_back {
     position: absolute;

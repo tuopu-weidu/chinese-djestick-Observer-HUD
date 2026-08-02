@@ -33,7 +33,7 @@ const WinAnnouncement = ({
           lineHeight: "1",
         }}
       >
-        ПЕРЕМАГАЄ В РАУНДІ
+        赢得本回合
       </span>
     </div>
   );

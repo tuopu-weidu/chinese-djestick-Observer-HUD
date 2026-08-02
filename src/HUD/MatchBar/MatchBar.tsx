@@ -36,7 +36,7 @@ export interface Timer {
 const getRoundLabel = (mapRound: number) => {
   const round = mapRound + 1;
   if (round <= 24) {
-    return `Раунд ${round}`;
+    return `第 ${round} 回合`;
   }
   const additionalRounds = round - 24;
   const OT = Math.ceil(additionalRounds / 6);

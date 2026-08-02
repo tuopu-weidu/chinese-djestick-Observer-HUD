@@ -61,7 +61,7 @@ const MapsBar = ({ match, map }: Props) => {
     return (
       <div id="maps_container">
         <div className="bestof">
-          Best of {match.matchType.replace("bo", "")}
+          BO{match.matchType.replace("bo", "")} 赛制
         </div>
         {
           <MapEntry
@@ -81,7 +81,7 @@ const MapsBar = ({ match, map }: Props) => {
   }
   return (
     <div id="maps_container">
-      <div className="bestof">Best of {match.matchType.replace("bo", "")}</div>
+      <div className="bestof">BO{match.matchType.replace("bo", "")} 赛制</div>
       {match.vetos
         .filter((veto) => veto.type !== "ban")
         .filter((veto) => veto.teamId || veto.type === "decider")

@@ -52,7 +52,7 @@
   left: 50%;
   transform: translateX(-50%);
   color: #ffffff;
-  // 1. ЧОРНИЙ БАЗОВИЙ ФОН (0.95 прозорості)
+  // 1. 黑色基础背景（0.95透明度）
   &::before {
     content: "";
     position: absolute;
@@ -61,7 +61,7 @@
     background-color: rgba(0, 0, 0, 0.95);
   }
 
-  // 2. ДВІ ВСПИШКИ — ЛІВА СИНЯ І ПРАВА ЧЕРВОНА (з fade-out)
+  // 2. 两道闪光 — 左蓝右红（带渐隐效果）
   &::after {
     content: "";
     position: absolute;
@@ -71,13 +71,13 @@
 
     background: radial-gradient(
         circle at 0% 80%,
-        // зсунули трохи вліво-вниз
+        // 稍微偏左下
         #5c58b9 0%,
         rgba(0, 0, 0, 0) 50%
       ),
       radial-gradient(
         circle at 100% 20%,
-        // зсунули вправо-вгору
+        // 偏右上
         #ba1b58 0%,
         rgba(0, 0, 0, 0) 50%
       );
@@ -223,9 +223,9 @@
     font-weight: 900;
     font-size: 36px;
 
-    // ЦИФРА РАХУНКУ — перший текстовий вузол
+    // 评分数字 — 第一个文本节点
     > :first-child {
-      margin-top: 8px; // ⬅⬅⬅ ТУТ РЕГУЛЮЄШ ВИСОТУ
+      margin-top: 8px; // ←←← 在此调整高度
     }
 
     .container {
@@ -308,10 +308,10 @@
   text-shadow: 0 0 10px white;
   color: white;
   border-radius: 0;
-  background-color: var(--sub-panel-color); /* базовый полупрозрачный фон */
+  background-color: var(--sub-panel-color); /* 基础半透明背景 */
   z-index: 10;
 
-  // Слой переливов под текстом
+  // 文字下方的渐变层
   &::before {
     content: "";
     position: absolute;
@@ -349,7 +349,7 @@
   }
 }
 
-// Градиентная переливка
+// 渐变过渡效果
 @keyframes ctGradient {
   0% {
     background-position: 0% 50%;
@@ -373,7 +373,7 @@
   }
 }
 
-// Анимации появления и скрытия
+// 出现和消失动画
 @keyframes WinTextScaleXIn {
   0% {
     opacity: 0;
@@ -476,7 +476,7 @@
     background-color: #5c58b9;
   }
 
-  /* === СТАДИИ === */
+  /* === 阶段 === */
 
   &.stage-background .container-background {
     transform: scaleX(1);
@@ -507,7 +507,7 @@
   }
 }
 
-/* Анимации */
+/* 动画 */
 @keyframes progressExpand {
   0% {
     width: 0%;
@@ -540,7 +540,7 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 320%; // или подбери вручную
+  height: 320%; // 或手动调整
   z-index: 2;
   opacity: 0;
   pointer-events: none;
@@ -646,21 +646,21 @@
   }
 }
 .wins_box {
-  width: 6px; // тонкі
-  height: 4px; // низькі
-  margin: 1px 3px; // відступи зліва/справа
-  border-radius: 0; // без заокруглень
-  background-color: rgba(255, 255, 255, 0.15); // базовий — світлий/сіруватий
+  width: 6px; // 窄
+  height: 4px; // 矮
+  margin: 1px 3px; // 左右间距
+  border-radius: 0; // 无圆角
+  background-color: rgba(255, 255, 255, 0.15); // 基础 — 浅色/灰色
 }
 .wins_box.CT {
   background-color: rgba(0, 0, 0, 0.6);
 }
 .wins_box.CT.win {
-  background-color: var(--color-new-ct); // синій
+  background-color: var(--color-new-ct); // 蓝色
 }
 .wins_box.T {
   background-color: rgba(0, 0, 0, 0.6);
 }
 .wins_box.T.win {
-  background-color: var(--color-new-t); // червоний
+  background-color: var(--color-new-t); // 红色
 }

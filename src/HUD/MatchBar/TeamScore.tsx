@@ -23,7 +23,7 @@ const TeamScore = ({ orientation, timer, team }: IProps) => {
 
       setTimeout(() => {
         setShow(false);
-      }, 7000); // 10 секунд
+      }, 7000); // 7秒
     },
     [orientation]
   );

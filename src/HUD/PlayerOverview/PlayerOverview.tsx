@@ -68,13 +68,13 @@ const PlayerOverview = ({ player, show, veto, players, round }: IProps) => {
 
             <div className="player-overview-stats">
                 <div className="player-overview-stat">
-                    <div className="label">KILLS: {data.kills}</div>
+                    <div className="label">击杀: {data.kills}</div>
                     <div className="panel">
                         <div className="filling" style={{width:`${calcWidth(data.kills, data.kills <= 30 ? 30 : 40)}%`}}></div>
                     </div>
                 </div>
                 <div className="player-overview-stat">
-                    <div className="label">HS: {data.hsp}%</div>
+                    <div className="label">爆头率: {data.hsp}%</div>
                     <div className="panel">
                         <div className="filling" style={{width:`${calcWidth(data.hsp, 100)}%`}}></div>
                     </div>

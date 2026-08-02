@@ -216,11 +216,11 @@
 }
 
 .observed_container {
-  /* Блок с пулемётом/иконками */
+  /* 机枪/图标区块 */
   .hp_overlay {
     .hp_content {
       .ammo {
-        /* ПУЛИ: оставляем как было */
+        /* 子弹：保持原样 */
         .ammo_icon {
           width: 18px;
           height: 18px;
@@ -229,41 +229,41 @@
           justify-content: center;
         }
 
-        /* ГРАНАТЫ: каждая в .grenade_icon — добавляем padding */
-        /* Но можно и здесь, если нужны только в области ammo */
+        /* 手雷：每个放在 .grenade_icon 中 — 添加内边距 */
+        /* 也可以放在这里，如果只需要在 ammo 区域内 */
         .weapon_icon.grenade_ammo {
           width: 18px;
           height: 18px;
           padding: 4px;
         }
 
-        /* НОЖИ и C4 (прямоугольные иконки) */
+        /* 刀和C4（矩形图标） */
         .weapon_icon {
-          width: 36px; /* контейнер пошире */
-          height: 18px; /* контейнер под высоту плашки */
+          width: 36px; /* 容器宽一些 */
+          height: 18px; /* 容器匹配标签高度 */
           display: flex;
           align-items: center;
           justify-content: center;
-          overflow: visible; /* чтобы SVG не обрезался */
+          overflow: visible; /* 防止SVG被裁剪 */
         }
 
-        /* Увеличиваем сам SVG внутри weapon_icon */
+        /* 放大 weapon_icon 内部的SVG */
         .weapon_icon svg {
-          width: auto; /* сохраняем пропорции */
-          height: 100%; /* по высоте контейнера */
-          transform: scale(1.3); /* масштаб +30% */
-          margin-top: -2px; /* чуть приподнимаем */
+          width: auto; /* 保持比例 */
+          height: 100%; /* 匹配容器高度 */
+          transform: scale(1.3); /* 放大30% */
+          margin-top: -2px; /* 稍微上移 */
         }
       }
     }
   }
 
-  /* Если нужно изначально для блока гранат (сверху над hp_overlay) */
+  /* 如果需要手雷区块的初始样式（在 hp_overlay 上方） */
   .grenades {
     .grenade_icon {
       display: flex;
       align-items: center;
-      padding: 4px 0 !important; /* 4px сверху/снизу у каждой гранаты */
+      padding: 4px 0 !important; /* 每个手雷上下4px */
     }
   }
 }

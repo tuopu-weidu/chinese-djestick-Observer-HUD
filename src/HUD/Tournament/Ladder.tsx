@@ -45,8 +45,8 @@ const setDepth = (matchups: I.DepthTournamentMatchup[], matchup: I.DepthTourname
 
 const getMatch = ({ matchup, matches, teams: allTeams}: { matches: I.Match[], teams: I.Team[], matchup: I.TournamentMatchup}) => {
 	const matchData: MatchData = {
-		left: { name: 'TBD', score: '-', logo: '' },
-		right: { name: 'TBD', score: '-', logo: '' }
+		left: { name: '待定', score: '-', logo: '' },
+		right: { name: '待定', score: '-', logo: '' }
 	};
 	const match = matches.find(match => match.id === matchup.matchId);
 	if (!match) return matchData;

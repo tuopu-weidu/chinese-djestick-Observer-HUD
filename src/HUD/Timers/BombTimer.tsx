@@ -23,7 +23,7 @@ const Bomb = () => {
     }
 
     if (!show) {
-      // сбрасываем всё если бомба исчезает
+      // 如果C4消失则重置所有状态
       setActivated(false);
       const el = timerRef.current;
       if (!el) return;

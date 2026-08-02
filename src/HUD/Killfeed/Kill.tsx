@@ -28,7 +28,7 @@ const Kill = ({ event }: { event: ExtendedKillEvent | BombEvent }) => {
           )}
         </div>
         <div className={`victim_name`}>
-          {event.type === "plant" ? "planted the bomb" : "defused the bomb"}
+          {event.type === "plant" ? "安放了C4" : "拆除了C4"}
         </div>
       </div>
     );

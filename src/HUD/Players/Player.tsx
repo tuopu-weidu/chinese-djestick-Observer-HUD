@@ -160,7 +160,7 @@ const Player = ({ player, isObserved }: IProps) => {
             />
           </div>
           <div className="round_damage">
-            Шкоди за раунд: {player.state.round_totaldmg}
+            回合伤害: {player.state.round_totaldmg}
           </div>
           <div className="health_armor">
             <div className="health">

@@ -19,11 +19,11 @@ const Money = ({ side, team, loss, equipment, money, show }: Props) => {
   return (
     <div className={`moneybox ${side} ${team} ${show ? "show" : "hide"}`}>
       <div className="money_container">
-        <div className="title">На команду</div>
+        <div className="title">团队资金</div>
         <div className="value">${money}</div>
       </div>
       <div className="money_container">
-        <div className="title">Бонус поразки</div>
+        <div className="title">连败奖金</div>
         <div className="value">${loss}</div>
       </div>
       <div className="loss_container">

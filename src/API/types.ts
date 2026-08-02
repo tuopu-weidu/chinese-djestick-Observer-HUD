@@ -34,7 +34,7 @@ export interface Config {
 }*/
 export interface TournamentMatchup {
   _id: string;
-  loser_to: string | null; // IDs of Matchups, not Matches
+  loser_to: string | null; // 匹配对决的ID，不是比赛ID
   winner_to: string | null;
   label: string;
   matchId: string | null;
@@ -143,14 +143,14 @@ export type Knife =
   | "knife_butterfly"//
   | "knife_falchion"//
   | "knife_flip"//
-  | "knife_outdoor" // Nomad Knife
+  | "knife_outdoor" // 游侠匕首
   | "knife_gut"//
   | "knife_gypsy_jackknife"//
   | "knife_karambit"// 
   | "knife_bayonet" //
   | "knife_cord" //
   | "knife_m9_bayonet"//
-  | "knife_push" // Shadow daggers
+  | "knife_push" // 暗影匕首
   | "knife_stiletto"//
   | "knife_survival_bowie"//
   | "knife_t"//
